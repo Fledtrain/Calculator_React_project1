@@ -4,6 +4,7 @@ import { useReducer } from "react";
 import DigitButton from "./DigitButton";
 import OperationButton from "./OperationButton";
 
+
 export const ACTIONS = {
   ADD_DIGIT: "add-digit",
   CHOOSE_OPERATION: "choose-operation",
@@ -12,6 +13,7 @@ export const ACTIONS = {
   EVALUATE: "evaluate",
 };
 
+// For adding, deleting, evaluating, clearing, and choosing numbers
 function reducer(state, { type, payload }) {
   switch (type) {
     case ACTIONS.ADD_DIGIT:
@@ -143,7 +145,7 @@ function App() {
       {/* ^^ This is for the grid of the calculator ^^ */}
       <div className="output">
         {/* ^^ This is for the output of the calculator ^^*/}
-        <div className="previous-operand">
+        <div  className="previous-operand">
           {formatOperand(previousOperand)}
           {operation}
         </div>
