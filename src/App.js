@@ -5,8 +5,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      {/* JSX doesnt use class, it uses className */}
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           This is React
         </p>
@@ -17,5 +17,9 @@ function App() {
     </div>
   );
 }
+function test(){
+
+}
+
 
 export default App;
