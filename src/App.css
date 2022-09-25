@@ -5,7 +5,8 @@
 }
 body {
   margin: 0;
-  background: linear-gradient(to right, #00aaffca, #00ff6a6b);
+  background: linear-gradient(to right, #B17261, #b17261ae);
+  /* background: linear-gradient(to right, #00aaffca, #00ff6a6b); */
 }
 .calculator-grid {
   display: grid;
