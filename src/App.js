@@ -1,7 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useReducer } from "react";
+
+function reducer(state, action) {}
 
 function App() {
+  const [{ currentOperand, previousOperand, operation }, dispatch] = useReducer(
+    reducer,
+    {}
+  );
+  
   return (
     <div className="calculator-grid">
       {/* ^^ This is for the grid of the calculator ^^ */}

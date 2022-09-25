@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: linear-gradient(to right, #00aaffca, #00ff6a6b);
+}
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  margin-top: 2rem;
+  grid-template-columns: repeat(
+    4,
+    6rem
+  ); /*This controls how the boxes in the calculator are set up */
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem); /*Determines the height of the boxes */
+}
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255,255, .75);
+}
+.calculator-grid >button:hover,
+.calculator-grid >button:focus{
+    background-color: rgba(255, 255,255, .9);   
+}
+
+
+/* Controls the inputs with width of 2 */
+.span-two {
+  grid-column: span 2;
+}
+
+/* Controls the output section */
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-wrap: break-word; /*Use this so it can break  */
+  word-break: break-all; /*So it will wrap around if its a big ass output */
+  
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+.output .current-operand {
+  color: rgba(255, 255, 255, 1);
+  font-size: 2.5rem;
+}
