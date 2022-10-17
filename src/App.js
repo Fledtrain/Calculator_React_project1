@@ -99,6 +99,7 @@ function reducer(state, { type, payload }) {
   }
 }
 
+//Evaluating current and previous Operand
 function evaluate({ currentOperand, previousOperand, operation }) {
   const prev = parseFloat(previousOperand);
   const current = parseFloat(currentOperand);
